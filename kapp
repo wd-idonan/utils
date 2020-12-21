@@ -1,0 +1,5 @@
+#!/bin/bash
+
+app=$1
+pids=`ps -ef |grep -w $1 |grep -v grep |awk '{print $2}'`
+[ -n "$pids" ] && kill $pids
